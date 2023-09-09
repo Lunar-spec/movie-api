@@ -1,0 +1,43 @@
+:root {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #eee;
+  background-color: #232323;
+}
+
+a {
+  font-weight: 300;
+  color: #bbb;
+  text-decoration: none;
+}
+a:hover {
+  color: #19a7ce;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3.2rem;
+  line-height: 1.1;
+  color: #eee;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #107895;
+}
