@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import Route and Routes
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { fetchMoviesAndSeries } from './services/api.js';
 import SearchBar from './components/SearchBar.jsx';
 import MovieList from './components/MovieList.jsx';
@@ -9,11 +9,9 @@ import NotFound from './components/NotFound.jsx';
 import './App.scss';
 
 function App() {
-  // State to hold the search query and search results
   const [query, setQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
 
-  // Function to handle the search query
   const handleSearch = async (searchQuery) => {
     setQuery(searchQuery);
     try {

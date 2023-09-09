@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import { FaStar } from 'react-icons/fa'; // Importing a star icon from React Icons
+import { FaStar } from 'react-icons/fa';
 
 function MovieDetails() {
     const { id } = useParams();
     const [details, setDetails] = useState(null);
 
     useEffect(() => {
-        // Function to fetch movie/series details by ID
         const fetchMovieDetails = async () => {
             try {
                 const response = await axios.get(`https://api.tvmaze.com/shows/${id}`);
@@ -18,11 +17,10 @@ function MovieDetails() {
             }
         };
 
-        // Call the fetchMovieDetails function when the component mounts
         fetchMovieDetails();
     }, [id]);
 
-    console.log(details)
+    // console.log(details)
 
     if (!details) {
         return <div>No such Movie/ Show</div>;
